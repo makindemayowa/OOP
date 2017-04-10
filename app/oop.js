@@ -34,7 +34,7 @@ Car.prototype.accelerate = function(){
         return ++this.speed;
     }
     else if (this.speed >200){
-    	  return ("speed limit reached")
+          return ("speed limit reached")
     }
     else{
         return 'Start engine before driving';
@@ -46,7 +46,7 @@ Car.prototype.nitroBoost = function(newSpeed){
     }
     else if ((this.speed >200) || ((this.speed + newSpeed) > 200))
     {
-    	  return ("speed limit reached")
+          return ("speed limit reached")
     }
     else{
         return 'Accelerate to a minimum of speed 90km/h, before nitro boost';
@@ -74,25 +74,22 @@ Car.prototype.speedCheck = function(){
     }
 }
 
-SmartCar.prototype = new Car();
 function SmartCar (make, model, color, year){
-    this.make = make;
-    this.model = model;
-    this.color = color;
-    this.year = year;
+    Car.call(this,make, model, color, year)
     this.wheels = 4;
-    this.speed;
+    this.speed = 200;
 }
+SmartCar.prototype = Object.create(Car.prototype);
 
-Truck.prototype = new Car();
 function Truck (make, model, color, year){
-    this.make = make;
-    this.model = model;
-    this.color = color;
-    this.year = year;
+    Car.call(this, make, model, color, year)
     this.wheels = 10;
-    this.speed;
+    this.speed = 80;
 }
+Truck.prototype = Object.create(Car.prototype);
+
+Truck.prototype.constructor = Truck;
+SmartCar.prototype.constructor = SmartCar;
 
 module.exports = Car;
 module.exports= SmartCar;
