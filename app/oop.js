@@ -91,6 +91,6 @@ Truck.prototype = Object.create(Car.prototype);
 Truck.prototype.constructor = Truck;
 SmartCar.prototype.constructor = SmartCar;
 
-module.exports = Car;
-module.exports= SmartCar;
-module.exports = Truck;
+module.exports.Car = Car;
+module.exports.SmartCar = SmartCar;
+module.exports.Truck = Truck;
