@@ -1,0 +1,22 @@
+{
+  "name": "oop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oop.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makindemayowa/OOP.1.git"
+  },
+  "author": "Makinde Mayowa Oriyomi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makindemayowa/OOP.1/issues"
+  },
+  "homepage": "https://github.com/makindemayowa/OOP.1#readme",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
